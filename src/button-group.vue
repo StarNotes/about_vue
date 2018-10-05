@@ -3,7 +3,19 @@
         <slot></slot>
     </div>
 </template>
-<script></script>
+<script>
+    export default {
+        //button-group出现在页面时触发
+        mounted(){
+            for(let node of this.$el.children){
+                let name = node.nodeName.toLocaleLowerCase();
+                if(name !== 'button'){
+                    console.warn(`g-button-group的子元素应该都是g-button`)
+                }
+            }
+        }
+    }
+</script>
 <style lang="scss">
     .g-button-group{
         display: inline-flex;
