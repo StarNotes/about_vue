@@ -45,6 +45,9 @@
         <g-input value="soliloquy"></g-input>
         <g-input value="soliloquy2" disable></g-input>
         <g-input value="soliloquy3" readonly></g-input>
+        <g-input v-model="message"></g-input>
+        <p>{{message}}</p>
+        <button @click="message+=1">加1</button>
     </div>
 
     <div class="box">
