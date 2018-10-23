@@ -1,5 +1,5 @@
 <template>
-    <div class="row" :style="{marginLeft:- gutter/2+'px',marginRight:- gutter/2+'px'}">
+    <div class="row" :style="rowstyle">
         <slot></slot>
     </div>
 </template>
@@ -23,6 +23,15 @@
                 vm.gutter = this.gutter;
             })
 
+        },
+        computed:{
+            rowstyle(){
+                let {gutter} = this;
+                return {
+                    marginLeft:- gutter/2+'px',
+                    marginRight:- gutter/2+'px'
+                }
+            }
         }
     }
 </script>
