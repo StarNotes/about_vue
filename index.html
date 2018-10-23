@@ -36,24 +36,41 @@
         .box{
             margin-top: 20px;
         }
+        .demoBox{
+            height: 50px;
+            background-color: gray;
+            border: 1px solid red;
+        }
     </style>
 </head>
 <body>
 <div id="app">
-    <div>
+    <div class="box">
         <g-row>
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-            <g-col>3</g-col>
+            <g-col span="9" class="demoBox">
+                <g-row align="left">
+                    <g-col>1</g-col>
+                    <g-col>2</g-col>
+                    <g-col>3</g-col>
+                    <g-col>4</g-col>
+                </g-row>
+            </g-col>
+            <g-col span="15" class="demoBox">
+                <g-row align="right">
+                    <g-col>1</g-col>
+                    <g-col>2</g-col>
+                    <g-col>3</g-col>
+                    <g-col>4</g-col>
+                    <g-col>5</g-col>
+                    <g-col>6</g-col>
+                    <g-col>7</g-col>
+                </g-row>
+            </g-col>
         </g-row>
         <g-row>
-            <g-col span="2">1</g-col>
-            <g-col span="10">2</g-col>
-            <g-col offset="2" span="10">3</g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col span="2">1</g-col>
-            <g-col span="22">2</g-col>
+            <g-col span="2" class="demoBox">1</g-col>
+            <g-col span="10" class="demoBox">2</g-col>
+            <g-col offset="2" span="10" class="demoBox">3</g-col>
         </g-row>
     </div>
     <div class="box">
