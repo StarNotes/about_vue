@@ -68,9 +68,18 @@
             </g-col>
         </g-row>
         <g-row>
-            <g-col span="2" class="demoBox">1</g-col>
-            <g-col span="10" class="demoBox">2</g-col>
-            <g-col offset="2" span="10" class="demoBox">3</g-col>
+            <g-col span="12" class="demoBox"
+                   :ipad="{span:8}"
+                   :norrowPc="{span:4}"
+                   :pc="{span:2}"
+                   :wide-pc="{span:1}"
+            >2</g-col>
+            <g-col span="12" class="demoBox"
+                   :ipad="{span:16}"
+                   :norrowPc="{span:20}"
+                   :pc="{span:22}"
+                   :wide-pc="{span:23}"
+            >3</g-col>
         </g-row>
     </div>
     <div class="box">
