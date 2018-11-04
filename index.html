@@ -45,108 +45,109 @@
 </head>
 <body>
 <div id="app">
-    <div class="box">
-        <g-row>
-            <g-col span="9" class="demoBox">
-                <g-row align="left">
-                    <g-col>1</g-col>
-                    <g-col>2</g-col>
-                    <g-col>3</g-col>
-                    <g-col>4</g-col>
-                </g-row>
-            </g-col>
-            <g-col span="15" class="demoBox">
-                <g-row align="right">
-                    <g-col>1</g-col>
-                    <g-col>2</g-col>
-                    <g-col>3</g-col>
-                    <g-col>4</g-col>
-                    <g-col>5</g-col>
-                    <g-col>6</g-col>
-                    <g-col>7</g-col>
-                </g-row>
-            </g-col>
-        </g-row>
-        <g-row>
-            <g-col span="12" class="demoBox"
-                   :ipad="{span:8}"
-                   :norrowPc="{span:4}"
-                   :pc="{span:2}"
-                   :wide-pc="{span:1}"
-            >2</g-col>
-            <g-col span="12" class="demoBox"
-                   :ipad="{span:16}"
-                   :norrowPc="{span:20}"
-                   :pc="{span:22}"
-                   :wide-pc="{span:23}"
-            >3</g-col>
-        </g-row>
-        <g-row>
-            <g-col span="12" class="demoBox"
-                   :ipad="{span:8}"
-                   :norrowPc="{span:4}"
-                   :pc="{span:2}"
-                   :wide-pc="{span:1}"
-            >
-                <div>444</div>
-            </g-col>
-            <g-col span="12" class="demoBox"
-                   :ipad="{span:8}"
-                   :norrowPc="{span:4}"
-                   :pc="{span:2}"
-                   :wide-pc="{span:1}"
-            >
-                <div>444</div>
-            </g-col>
-            <g-col span="12" class="demoBox"
-                   :ipad="{span:8}"
-                   :norrowPc="{span:4}"
-                   :pc="{span:2}"
-                   :wide-pc="{span:1}"
-            >
-                <div>444</div>
-            </g-col>
-            <g-col span="12" class="demoBox"
-                   :ipad="{span:8}"
-                   :norrowPc="{span:4}"
-                   :pc="{span:2}"
-                   :wide-pc="{span:1}"
-            >
-                <div>444</div>
-            </g-col>
-        </g-row>
-    </div>
-    <div class="box">
-        <!--vue使用的是html语法，不允许自闭和-->
-        <g-input value="soliloquy"></g-input>
-        <g-input value="soliloquy2" disable></g-input>
-        <g-input value="soliloquy3" readonly></g-input>
-        <g-input v-model="message"></g-input>
-        <p>{{message}}</p>
-        <button @click="message+=1">加1</button>
-    </div>
+    <button @click="showToast()">点击</button>
+    <!--<div class="box">-->
+        <!--<g-row>-->
+            <!--<g-col span="9" class="demoBox">-->
+                <!--<g-row align="left">-->
+                    <!--<g-col>1</g-col>-->
+                    <!--<g-col>2</g-col>-->
+                    <!--<g-col>3</g-col>-->
+                    <!--<g-col>4</g-col>-->
+                <!--</g-row>-->
+            <!--</g-col>-->
+            <!--<g-col span="15" class="demoBox">-->
+                <!--<g-row align="right">-->
+                    <!--<g-col>1</g-col>-->
+                    <!--<g-col>2</g-col>-->
+                    <!--<g-col>3</g-col>-->
+                    <!--<g-col>4</g-col>-->
+                    <!--<g-col>5</g-col>-->
+                    <!--<g-col>6</g-col>-->
+                    <!--<g-col>7</g-col>-->
+                <!--</g-row>-->
+            <!--</g-col>-->
+        <!--</g-row>-->
+        <!--<g-row>-->
+            <!--<g-col span="12" class="demoBox"-->
+                   <!--:ipad="{span:8}"-->
+                   <!--:norrowPc="{span:4}"-->
+                   <!--:pc="{span:2}"-->
+                   <!--:wide-pc="{span:1}"-->
+            <!--&gt;2</g-col>-->
+            <!--<g-col span="12" class="demoBox"-->
+                   <!--:ipad="{span:16}"-->
+                   <!--:norrowPc="{span:20}"-->
+                   <!--:pc="{span:22}"-->
+                   <!--:wide-pc="{span:23}"-->
+            <!--&gt;3</g-col>-->
+        <!--</g-row>-->
+        <!--<g-row>-->
+            <!--<g-col span="12" class="demoBox"-->
+                   <!--:ipad="{span:8}"-->
+                   <!--:norrowPc="{span:4}"-->
+                   <!--:pc="{span:2}"-->
+                   <!--:wide-pc="{span:1}"-->
+            <!--&gt;-->
+                <!--<div>444</div>-->
+            <!--</g-col>-->
+            <!--<g-col span="12" class="demoBox"-->
+                   <!--:ipad="{span:8}"-->
+                   <!--:norrowPc="{span:4}"-->
+                   <!--:pc="{span:2}"-->
+                   <!--:wide-pc="{span:1}"-->
+            <!--&gt;-->
+                <!--<div>444</div>-->
+            <!--</g-col>-->
+            <!--<g-col span="12" class="demoBox"-->
+                   <!--:ipad="{span:8}"-->
+                   <!--:norrowPc="{span:4}"-->
+                   <!--:pc="{span:2}"-->
+                   <!--:wide-pc="{span:1}"-->
+            <!--&gt;-->
+                <!--<div>444</div>-->
+            <!--</g-col>-->
+            <!--<g-col span="12" class="demoBox"-->
+                   <!--:ipad="{span:8}"-->
+                   <!--:norrowPc="{span:4}"-->
+                   <!--:pc="{span:2}"-->
+                   <!--:wide-pc="{span:1}"-->
+            <!--&gt;-->
+                <!--<div>444</div>-->
+            <!--</g-col>-->
+        <!--</g-row>-->
+    <!--</div>-->
+    <!--<div class="box">-->
+        <!--&lt;!&ndash;vue使用的是html语法，不允许自闭和&ndash;&gt;-->
+        <!--<g-input value="soliloquy"></g-input>-->
+        <!--<g-input value="soliloquy2" disable></g-input>-->
+        <!--<g-input value="soliloquy3" readonly></g-input>-->
+        <!--<g-input v-model="message"></g-input>-->
+        <!--<p>{{message}}</p>-->
+        <!--<button @click="message+=1">加1</button>-->
+    <!--</div>-->
 
-    <div class="box">
-        <g-input value="soliloquy4" error="请正确填写"></g-input>
-    </div>
+    <!--<div class="box">-->
+        <!--<g-input value="soliloquy4" error="请正确填写"></g-input>-->
+    <!--</div>-->
 
-    <div  class="box">
-        <g-button :loading="loading1" @click="loading1 = !loading1">
-            按钮
-        </g-button>
-        <g-button icon="settings" :loading="loading2" @click="loading2 = !loading2">
-            按钮
-        </g-button>
-        <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
-            按钮
-        </g-button>
-        <!--<g-icon name="settings"></g-icon>-->
-        <g-button-group>
-            <g-button icon="left">上一页</g-button>
-            <g-button>更多</g-button>
-            <g-button icon="right" icon-position="right">下一页</g-button>
-        </g-button-group>
-    </div>
+    <!--<div  class="box">-->
+        <!--<g-button :loading="loading1" @click="loading1 = !loading1">-->
+            <!--按钮-->
+        <!--</g-button>-->
+        <!--<g-button icon="settings" :loading="loading2" @click="loading2 = !loading2">-->
+            <!--按钮-->
+        <!--</g-button>-->
+        <!--<g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">-->
+            <!--按钮-->
+        <!--</g-button>-->
+        <!--&lt;!&ndash;<g-icon name="settings"></g-icon>&ndash;&gt;-->
+        <!--<g-button-group>-->
+            <!--<g-button icon="left">上一页</g-button>-->
+            <!--<g-button>更多</g-button>-->
+            <!--<g-button icon="right" icon-position="right">下一页</g-button>-->
+        <!--</g-button-group>-->
+    <!--</div>-->
 
 
 </div>

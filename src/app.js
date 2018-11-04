@@ -5,6 +5,8 @@ import ButtonGroup from './button-group'
 import Input from './input'
 import Row from './row'
 import Col from './col'
+import Toast from './toast'
+import Plugin from './plugin'
 
 Vue.component('g-button',Button)
 Vue.component('g-icon',Icon)
@@ -12,6 +14,8 @@ Vue.component('g-button-group',ButtonGroup)
 Vue.component('g-input',Input)
 Vue.component('g-row',Row)
 Vue.component('g-col',Col)
+Vue.component('g-toast',Toast)
+Vue.use(Plugin);
 
 new Vue({
     el:"#app",
@@ -21,9 +25,29 @@ new Vue({
         loading3:false,
         message:"so",
     },
-    method:{
+    created(){
+      this.$toast('我是message',{
+          closeButton: {
+              text:"知道了",
+              callback(){
+                  console.log("关闭吧")
+              }
+          }
+      })
+    },
+    methods:{
         inputChange(e){
 
+        },
+        showToast () {
+            this.$toast('333333',{
+                closeButton: {
+                    text:"知道了",
+                    callback(){
+                        console.log("关闭吧")
+                    }
+                }
+            })
         }
     }
 })
