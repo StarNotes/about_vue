@@ -26,26 +26,22 @@ new Vue({
         message:"so",
     },
     created(){
-      this.$toast('我是message',{
-          closeButton: {
-              text:"知道了",
-              callback(){
-                  console.log("关闭吧")
-              }
-          }
-      })
+
     },
     methods:{
         inputChange(e){
 
         },
         showToast () {
-            this.$toast('333333',{
+            this.$toast('我是message',{
                 closeButton: {
                     text:"知道了",
                     callback(){
                         console.log("关闭吧")
-                    }
+                    },
+                    autoClose: true,
+                    autoCloseDelay: 3,
+                    position:'bottom'
                 }
             })
         }
